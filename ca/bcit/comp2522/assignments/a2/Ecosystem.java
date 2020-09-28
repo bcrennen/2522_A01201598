@@ -75,6 +75,13 @@ public class Ecosystem {
             guppy = new Guppy(Guppy.DEFAULT_GENUS, Guppy.DEFAULT_SPECIES, age, (r.nextDouble() < 0.35), 2, healthCoe);
             pool3.addGuppy(guppy);
         }
+        pools.add(pool1);
+        pools.add(pool2);
+        pools.add(pool3);
+    }
+
+    public void simulate(int numberOfWeeks) {
+
     }
 
 
