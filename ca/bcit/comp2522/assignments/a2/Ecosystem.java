@@ -81,7 +81,9 @@ public class Ecosystem {
     }
 
     public void simulate(int numberOfWeeks) {
-
+        for (int i = 0; i < numberOfWeeks; i++) {
+            simulateOneWeek();
+        }
     }
 
 
