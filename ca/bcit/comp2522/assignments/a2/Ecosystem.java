@@ -58,7 +58,22 @@ public class Ecosystem {
         for (int i = 0; i < 300; i++) {
             int age = r.nextInt(25 - 10) + 10;
             double healthCoe = 0.5 + (0.8 - 0.5) * r.nextDouble();
-            guppy = new Guppy(Guppy.DEFAULT_GENUS,Guppy.DEFAULT_SPECIES, age, (r.nextDouble() < 0.75), );
+            guppy = new Guppy(Guppy.DEFAULT_GENUS, Guppy.DEFAULT_SPECIES, age, (r.nextDouble() < 0.75), 2, healthCoe);
+            pool1.addGuppy(guppy);
+        }
+
+        for (int i = 0; i < 100; i++) {
+            int age = r.nextInt(15 - 10) + 10;
+            double healthCoe = 0.8 + (1.0 - 0.8) * r.nextDouble();
+            guppy = new Guppy(Guppy.DEFAULT_GENUS, Guppy.DEFAULT_SPECIES, age, (r.nextDouble() < 0.75), 2, healthCoe);
+            pool2.addGuppy(guppy);
+        }
+
+        for (int i = 0; i < 200; i++) {
+            int age = r.nextInt(49 - 15) + 15;
+            double healthCoe = 0.0 + (1.0 - 0.0) * r.nextDouble();
+            guppy = new Guppy(Guppy.DEFAULT_GENUS, Guppy.DEFAULT_SPECIES, age, (r.nextDouble() < 0.35), 2, healthCoe);
+            pool3.addGuppy(guppy);
         }
     }
 
