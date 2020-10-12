@@ -1,5 +1,7 @@
 package ca.bcit.comp2522.assignments.a3;
 
+import java.util.Objects;
+
 /**
  * The parent class for different types of operations.
  *

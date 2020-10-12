@@ -38,17 +38,22 @@ public class RPNCalculator {
      * @return result
      * */
     public int processFormula(final String formula) throws
-            IllegalArgumentException, StackOverflowException,
-            StackUnderflowException, InvalidOperationTypeException {
-        if (formula == null || formula.length() == 0) {
-            throw new IllegalArgumentException("Formula does not exist");
+            StackOverflowException, StackUnderflowException,
+            InvalidOperationTypeException {
+        if (formula == null) {
+            throw new IllegalArgumentException("Formula does not exist.");
+        } else if (formula.length() == 0) {
+            throw new StackUnderflowException("Formula is empty");
         }
         Scanner scan = new Scanner(formula);
-        Operation currentOperation;
+        Operation op;
 
         while (scan.hasNext()) {
             if (scan.hasNextInt()) {
                 this.push(scan.nextInt());
+            } else {
+                op = this.getOperation(scan.next().charAt(0));
+                perform(op);
             }
         }
         return getResult();
@@ -96,7 +101,7 @@ public class RPNCalculator {
 
     public void perform(final Operation operation)
             throws IllegalArgumentException, StackUnderflowException,
-            StackOverflowException, InvalidOperationTypeException {
+            StackOverflowException {
         if (operation == null) {
             throw new IllegalArgumentException("Operation cannot be null.");
         }
