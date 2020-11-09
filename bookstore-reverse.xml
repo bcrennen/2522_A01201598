@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bookstore>
+    <book edition="6" isbn="0321049314" year="2000">
+        <name>Psychology</name>
+        <description>Introductory level Psychology course book</description>
+        <courseapplicability>
+            <course>PSYCH1101</course>
+        </courseapplicability>
+        <publisher>Prentice Hall</publisher>
+        <price currency="CAN">110.00</price>
+        <stock>
+            <category>Psychology</category>
+            <copiesinstock>10</copiesinstock>
+            <coverimage url="./images/psychology-cover.jpg"/>
+            <availability days="1"/>
+        </stock>
+    </book>
+    <book edition="1" isbn="0596001436" year="2001">
+        <name>Java and XSLT</name>
+        <description>Embedding XML Processing Into Java Applications</description>
+        <courseapplicability>
+            <course>MMSD4670</course>
+        </courseapplicability>
+        <publisher>O&amp;amp;Reilly</publisher>
+        <price currency="CAN">59.95</price>
+        <price currency="US">39.95</price>
+        <stock>
+            <category>Java and XSLT</category>
+            <subcategory>Java Programming</subcategory>
+            <copiesinstock>2</copiesinstock>
+            <coverimage url="./images/java-and-xslt-cover.jpg"/>
+            <availability days="2"/>
+        </stock>
+    </book>
+    <book edition="1" isbn="0130655678" year="2001">
+        <name>Definitive XML Schema</name>
+        <description>XML Schema Reference and Tutorial</description>
+        <courseapplicability>
+            <course>MMSD4670</course>
+            <course>MMSD0410</course>
+            <course>MMSD4620</course>
+        </courseapplicability>
+        <publisher>Prentice Hall</publisher>
+        <price currency="US">31.49</price>
+        <stock>
+            <category>Technology</category>
+            <subcategory>XML Schema</subcategory>
+            <copiesinstock>2</copiesinstock>
+            <coverimage url="./images/xml-schema-cover-.jpg"/>
+            <availability days="4"/>
+        </stock>
+    </book>
+</bookstore>

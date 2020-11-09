@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML tagset to represent book information for the bookstore data set
+  -->
+<bookstore>
+  <book isbn="0321049314" year="2000" edition="6">
+    <name>Psychology</name>
+    <description>Introductory level Pyschology course book</description>
+    <courseapplicability>
+      <course institute="BCIT">PSYC1101</course>
+    </courseapplicability>
+    <author firstname="Carole" lastname="Wade" />
+    <author firstname="Carol" lastname="Tavris" />
+    <publisher>Prentice Hall</publisher>
+    <price currency="CAN">110.00</price>
+    <stock>
+      <category>Psychology</category>
+      <copiesinstock>10</copiesinstock>
+      <coverimage url="./images/psychology-cover.jpg" />
+      <availability days="1" />
+    </stock>
+  </book>
+  <book isbn="0596001436" year="2001" edition="1">
+    <name>Java and XSLT</name>
+    <description>Embedding XML Processing Into Java Applications</description>
+    <courseapplicability>
+      <course institute="BCIT">MMSD4670</course>
+    </courseapplicability>
+    <author firstname="Eric" lastname="Burke" />
+    <publisher>O&amp;Reilly</publisher>
+    <price currency="CAN">59.95</price>
+    <price currency="US">39.95</price>
+    <stock>
+      <category>Programming</category>
+      <subcategory>Java Programming</subcategory>
+      <copiesinstock>2</copiesinstock>
+      <coverimage url="./images/java-and-xslt-cover.jpg" />
+      <availability days="2" />
+    </stock>
+  </book>
+  <book isbn="0130655678" year="2001" edition="1">
+    <name>Definitive XML Schema</name>
+    <description>XML Schema Reference and Tutorial</description>
+    <courseapplicability>
+      <course institute="BCIT">MMSD4670</course>
+      <course institute="BCIT">MMSD0410</course>
+      <course institute="BCIT">MMSD4620</course>
+    </courseapplicability>
+    <author firstname="Priscilla" lastname="Walmsley" />
+    <publisher>Prentice Hall</publisher>
+    <price currency="US">31.49</price>
+    <stock>
+      <category>Technology</category>
+      <subcategory>XML Schema</subcategory>
+      <copiesinstock>2</copiesinstock>
+      <coverimage url="./images/xml-schema-cover-.jpg" />
+      <availability days="4" />
+    </stock>
+  </book>
+</bookstore>
