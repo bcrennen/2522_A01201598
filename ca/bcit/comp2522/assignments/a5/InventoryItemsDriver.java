@@ -8,6 +8,10 @@ import java.util.Date;
  * @version 2020
  * */
 public class InventoryItemsDriver {
+    /**
+     * Method to print all the string.
+     * @param args
+     * */
     public static void main(final String[] args) {
         // create a list of rental array.
         Rental[] rentalsArray = {
