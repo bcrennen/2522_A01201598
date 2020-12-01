@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Diver class for sprite and resources.
@@ -18,6 +19,7 @@ public class Driver {
      * @param args for arg
      * */
     public static void main(final String[] args) throws IOException {
+        Date saveName = new Date();
         // list the weapons for 2D object.
         ArrayList<String> gundamWeapon = new ArrayList<String>();
         gundamWeapon.add("Gun");
@@ -56,8 +58,9 @@ public class Driver {
         // write to file resource.dat.
         DataOutputStream out = null;
         try {
-            out = new DataOutputStream(new
-                    BufferedOutputStream(new FileOutputStream("resource.dat")));
+            out = new DataOutputStream(
+                    new BufferedOutputStream(
+                            new FileOutputStream(saveName + ".dat")));
 
             out.writeUTF(gamerLevel1.getLevelName());
             out.writeInt(gamerLevel1.getLevelNumber());
@@ -79,8 +82,9 @@ public class Driver {
         // read the file in resource.dat.
         DataInputStream in = null;
         try {
-            in = new DataInputStream(new
-                    BufferedInputStream(new FileInputStream("resource.dat")));
+            in = new DataInputStream(
+                    new BufferedInputStream(
+                            new FileInputStream(saveName + ".dat")));
 
             System.out.println("\nLevel name: " + in.readUTF());
             System.out.println("\nLevel number: " + in.readInt());
