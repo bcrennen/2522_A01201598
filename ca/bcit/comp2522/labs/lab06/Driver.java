@@ -3,6 +3,7 @@ package ca.bcit.comp2522.labs.lab06;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -19,7 +20,11 @@ public class Driver {
      * @param args for arg
      * */
     public static void main(final String[] args) throws IOException {
-        Date saveName = new Date();
+        //Get the date file name.
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy"
+                + " HH-mm-ss");
+        Date date = new Date();
+        String dateName = dateFormat.format(date) + ".dat";
         // list the weapons for 2D object.
         ArrayList<String> gundamWeapon = new ArrayList<String>();
         gundamWeapon.add("Gun");
@@ -61,7 +66,7 @@ public class Driver {
         try {
             out = new DataOutputStream(
                     new BufferedOutputStream(
-                            new FileOutputStream(saveName + ".dat")));
+                            new FileOutputStream(dateName)));
 
             out.writeUTF(gamerLevel1.getLevelName());
             out.writeInt(gamerLevel1.getLevelNumber());
@@ -85,7 +90,7 @@ public class Driver {
         try {
             in = new DataInputStream(
                     new BufferedInputStream(
-                            new FileInputStream(saveName + ".dat")));
+                            new FileInputStream(dateName)));
 
             System.out.println("\nLevel name: " + in.readUTF());
             System.out.println("\nLevel number: " + in.readInt());
