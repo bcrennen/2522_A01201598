@@ -29,7 +29,8 @@ public class Driver {
         // to read this file, add new image,
         // and save it to your file, and copy path and paste it between ""
         BufferedImage img = ImageIO.read(new File(
-                "2522_A01201598/ca/bcit/comp2522/labs/lab06/Stike.png"));
+                "/Users/brennenchiu/IdeaProjects"
+                        + "/2522_A01201598/ca/bcit/comp2522/labs/lab06/Stike.png"));
         // create a new sprite for 2D object.
         Sprite s = new Sprite(img, 619, 420, 100, 68.9f, gundamWeapon);
         try {
